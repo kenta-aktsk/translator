@@ -57,7 +57,7 @@ And assume that you have user record in your db table like below:
 %{id: 1, email: "user01@example.com", name: "Kenta Katsumata", profile: "Engineer, Writer"}
 ```
 
-First of all, define migration file for translation table like below:
+First of all, if you want to translate `name` and `profile` fields, define migration file for translation table like below:
 
 ```elixir
 defmodule MyApp.Repo.Migrations.CreateUserTranslation do
@@ -155,7 +155,7 @@ def update(conn, %{"id" => id, "user" => user_params}) do
 end
 ```
 
-It is up to you to decide what locale to be passed.
+It is up to you what locale to pass.
 
 ## View helper
 
