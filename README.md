@@ -54,7 +54,7 @@ end
 And assume that you have user record in your db table like below:
 
 ```elixir
-%{id: 1, email: "user01@example.com", name: "Kenta Katsumata", profile: "Engineer, Writer"}
+%{id: 1, email: "user01@example.com", name: "Kenta Katsumata", profile: "living in Tokyo"}
 ```
 
 First of all, if you want to translate `name` and `profile` fields, define migration file for translation table like below:
@@ -174,6 +174,9 @@ end
 <li>
   <%= translate(@user, :name) %>
 </li>
+
+# templates/user/form.html.eex
+<%= text_input :user, :name, value: translate(@changeset, @user, :name), class: "form-control" %>
 ```
 
 ## Example
