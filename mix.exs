@@ -34,7 +34,7 @@ defmodule Translator.Mixfile do
   end
 
   defp deps do
-    [{:ecto, "~> 2.0.0-beta"},
+    [{:ecto, "~> 2.0.0-rc"},
      {:ex_doc, "~> 0.11", only: :docs}]
   end
 end
